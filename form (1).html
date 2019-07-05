@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	registration form
+</title>
+<script type="text/javascript">
+		function validateForm()
+    		{
+    			 var x=document.forms["newform"]["firstname"].value;
+    			 if (x=="") 
+    			 	{
+    			 		alert ("UserName required");
+    			 		return false;
+    			 	}
+    			 var y=document.forms["newform"]["email"].value;
+    			 if(y=="")
+    			 {
+    			 	alert("Email required");
+    			 	return false;
+    			 }
+    			 var z=document.forms["newform"]["password"].value
+    			 if (z=="")
+    			 {
+    			 	alert("Password required");
+    			 	return false;
+    			 }
+    			 
+     
+    			 if (z.length<6||z.length>12) 
+    			 {
+    			 	alert("Passwords length must be between 6 to 12 characters!");
+    			 	return false;
+    			 }
+    			 
+    			 
+    		}
+    		function validateEmail(email){
+    			var reg=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    			if (reg.test(email.value)==false) 
+    			{
+    				alert("Invalid Email Address");
+    				return false;
+    			}
+    			return true;
+    		}
+    	</script>
+
+</head>
+<body>
+<form action="actionform.php" name="newform" method="Post" onsubmit="return validateForm()">
+	<div>
+		<h1>placement registration form</h1>
+		username:
+		<input type="text" name="firstname" placeholder="nupursingh" >
+		<br>
+		<br>
+		register number:
+		<input type="text" name="register" placeholder="RA1611008010775" >
+		<br>
+		<br>
+		password:
+		<input type="password" name="password" placeholder="yuio#fhdsh" minlength="8" >
+		<br>
+		<br>
+		address:
+		<input type="text" name="address" placeholder="srm" >
+		<br>
+		<br>
+		city:
+		<input type="radio" name="siliguri">siliguri
+		<input type="radio" name="chennai">chennai
+		<input type="radio" name="bangalor">bangalore
+		<input type="radio" name="kolkata">kolkata
+
+        <br>
+        <br>
+        email:
+        <input type="text" name="email" placeholder="xyz@gmail.com">
+        <br>
+        <br>
+        pincode:
+        <input type="number" name="pincode" maxlength="8">
+        <br>
+        <br>
+
+        Mobilenumber:
+        <input type="number" name="mobilenumber" placeholder="Mobilenumber">
+        <br>
+        <br>
+        skillset:
+        <input type="checkbox" name="sql">sql
+        <input type="checkbox" name="sql">web
+        <input type="checkbox" name="sql">maths
+        <input type="checkbox" name="sql">dbms
+        <br>
+        <br>
+
+        <input type="submit" name="register">
+        <br>
+
+	</div>
+</form>
+</body>
+</html>

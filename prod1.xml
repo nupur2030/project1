@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prod1_imp.xsl"?>
+
+<productinfo>
+	<product>
+		<slno>1</slno>
+		<pname>salt</pname>
+		<price>20</price>
+	</product>
+	<product>
+		<slno>2</slno>
+		<pname>sugar</pname>
+		<price>40</price>
+	</product>
+</productinfo>

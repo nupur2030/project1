@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<script type="text/javascript">
+		function validform()
+		{
+			var x=document.form["newform"]["firstname"].value;
+			if(x==" ")
+			{
+				alert("userame required");
+				return false;
+			}
+			var y=document.form["newform"]["password"].value;
+			if(y==" ")
+			{
+				alert("password required");
+				return false;
+			}
+			var z=document.form["newform"]["email"].value;
+			if(y==" ")
+			{
+				alert("email required");
+				return false;
+			}
+			if(x.length<6||z.length>12)
+			{
+				alert("password must be betwen 6 to 12");
+				return false;
+			}
+			function validemail(email)
+			{
+				var reg=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+				if(reg.test(email.value)==false)
+				{
+					alert("invalid mail");
+					return false;
+				}
+				return true;
+			}
+
+
+
+		}
+	</script>
+</head>
+<body>
+	<form action="ayush.php" name="newform" method="post" onsubmit="return validform()">
+		<div>
+			<h1>
+				placement registration form
+			</h1>
+			username:
+			<input type="text" name="firstname">
+			<br>
+			<br>
+			password:
+			<input type="password" name="password" minlength="8">
+			<br>
+			<br>
+			email:
+			<input type="text" name="email">
+			<br>
+			<br>
+			<colspan="2">
+			remember me:
+			<input type="checkbox" name="rm">
+			<br>
+			<br>
+			<input type="submit" name="submit">
+		</div>
+	</form>
+
+</body>
+</html>

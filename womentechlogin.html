@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GOOGLE WOMEN TECH MAKER</title>
+	 <link rel="stylesheet" href="stylelogin.css">
+   <script type="text/javascript">
+  function validateform()
+  {
+  var email=document.myform.email.value;
+  var password=document.myform.password.value;
+
+  if(email==null || email="")
+  {
+    alert("email cant be blank");
+    return false;
+  }else if (password.length<6) {
+    alert("password must be atleat 6 character");
+    return false;
+  }
+}
+
+</script>
+
+</head>
+<body>
+<header>
+</header>
+<form action="log.php"  method="POST">
+ <div class="login-box">
+      <h1>Login Page</h1>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <h5>email</h5>
+        <input type="email" placeholder="eg:xyz@gmail.com" name="email">
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <h5>Password</h5>
+        <input type="password" placeholder="ex:nupur@123" name="password">
+      </div>
+      <br>
+      <br>
+      <div>
+     <input type="checkbox" name="remeber" value="Remeber me" required>Remember me
+     </div>
+        <br>
+        <br>
+       <br>
+        <input type="submit" class="btn" value="Login" name="sub">
+    </div>
+</form >
+
+<footer>
+<div style="margin-top:100%; border: 5px solid black; background-color: white; text-align: center;">
+   Contact Us:
+   <br>
+   nupursingh122@gmail.com
+   <br>
+   8617071240
+   <br> 
+</div>
+</footer>
+
+</body>
+<?php
+  function Cookie_val($ch){
+    if ($ch==1)
+    {   
+        if (isset($_COOKIE['UName']))
+        {
+            return $_COOKIE['UName'];
+        }
+        else 
+            return;
+    }
+    else
+    {
+        if (isset($_COOKIE['Pwd']))
+        {
+            return $_COOKIE['Pwd'];
+        }
+        else 
+            return;
+    }
+    }
+?>
+</html>

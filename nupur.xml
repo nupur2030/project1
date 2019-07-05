@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<?xml-stylesheet type="text/xsl" href="nupur1_imp.xsl"?>
+	<productinfo>
+<product>
+<slno>1</slno>
+<pname>salt</pname>
+<price>20</price>
+</product>
+<product>
+<slno>2</slno>
+<pname>sugar</pname>
+<price>100</price>
+</product>
+<product>
+<slno>3</slno>
+<pname>Bread</pname>
+<price>15</price>
+</product>
+<product>
+<slno>4</slno>
+<pname>nutella</pname>
+<price>40</price>
+</product>
+<product>
+<slno>5</slno>
+<pname>jam</pname>
+<price>60</price>
+</product>
+
+</productinfo>
